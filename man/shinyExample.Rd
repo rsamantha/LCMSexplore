@@ -15,3 +15,8 @@ a standard shiny app
 \description{
 Depending on the argument, run a web based interactive app to demonstrate the use of xcms
 }
+\examples{
+## show he list of all the available demos
+shinyExample()
+
+}

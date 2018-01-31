@@ -8,5 +8,5 @@ Description: Interactive demo of LC-MS data exploration: missing values, visuali
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Depends: shiny, gridExtra, tidyverse, forcats, impute
+Depends: shiny, gridExtra, tidyverse, forcats, impute, factoextra, FactoMineR
 RoxygenNote: 6.0.1

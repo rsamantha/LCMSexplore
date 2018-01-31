@@ -1,7 +1,4 @@
 ## Evaluating missing values and imputing strategies
-library(tidyverse)
-library(forcats)
-library(impute)
 
 #load the data
 data(rubusNA)
@@ -50,7 +47,7 @@ server <- function(input, output){
     }
     #knn
     if(check_imputing(input$imputing_str)[4]){
-      new<-rubusNA %>%
+      new<-suppressWarnings(rubusNA %>%
         as.tibble %>%
         filter(sampleName!="OM_11_DR_P_09_1501") %>%
         select(-color,-location,-year,-variety,-variety.name,-temperature) %>%
@@ -58,13 +55,13 @@ server <- function(input, output){
         spread(sampleName, Value) %>%
         remove_rownames %>%
         column_to_rownames(var="Feature") %>%
-        as.matrix
-      new_imputed<-impute.knn(new,k=5)
-      rubusKNN<-new_imputed$data %>%
+        as.matrix)
+      new_imputed<-suppressMessages(impute.knn(new,k=5))
+      rubusKNN<-suppressWarnings(new_imputed$data %>%
         as.data.frame %>%
         rownames_to_column(var="feature") %>%
         gather(sampleName,knn,-feature) %>%
-        filter(feature==input$fname)
+        filter(feature==input$fname))
 
       d <- suppressMessages(full_join(d,rubusKNN))
     }

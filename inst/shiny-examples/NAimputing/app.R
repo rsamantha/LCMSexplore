@@ -137,7 +137,9 @@ ui <- fluidPage(
     sidebarPanel(
       #width = 4,
       ## select the variable to explore
-      selectInput(inputId='fname', label=h4("Feature"), choices=colnames(rubusNA)[8:20],multiple = FALSE,selected = NULL),
+      selectInput(inputId='fname', label=h4("Feature"),
+                  choices=c("284.03/1258.17","58.03/1500.06","663.38/2431.68","108.02/845.92","1121.28/1304.53"),
+                  multiple = FALSE,selected = NULL),
 
       ## show class lable information
       checkboxGroupInput(inputId='sclass', label=h4("Sample class"),

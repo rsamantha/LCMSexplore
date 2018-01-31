@@ -1,4 +1,4 @@
-## Evaluating missing values and imputing strategies
+## Evaluating the effect of missing values and imputing strategies
 
 #load the data
 data(rubusNA)

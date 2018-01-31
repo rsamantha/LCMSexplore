@@ -2,7 +2,7 @@ Package: LCMSexplore
 Type: Package
 Title: Demo for the EBI-EMBO Metabolomics Course 2018
 Version: 0.1.0
-Author: Samantha Riccadonna
+Author: Samantha Riccadonna, Pietro Franceschi
 Maintainer: Samantha Riccadonna <samantha.riccadonna@fmach.it>
 Description: Interactive demo of LC-MS data exploration: missing values, visualisation and data filtering
 License: GPL-2

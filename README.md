@@ -1,4 +1,4 @@
-Demo for the EBI metabolomics course. The package is designed to interactively explore some crucial aspects of the analysis pipeline for a metabolomics experiment. In particular, the demo will provide the feeling of the effect of different strategies for handling missing values and provide an example for discussing the usefulness of data visualization. This demo will follow the demo [pietrofranceschi/LCMSdemo]https://github.com/pietrofranceschi/LCMSdemo).
+Demo for the EBI metabolomics course. The package is designed to interactively explore some crucial aspects of the analysis pipeline for a metabolomics experiment. In particular, the demo will provide the feeling of the effect of different strategies for handling missing values and provide an example for discussing the usefulness of data visualization. This demo will follow the demo [pietrofranceschi/LCMSdemo](https://github.com/pietrofranceschi/LCMSdemo).
 
 ## Installation
 

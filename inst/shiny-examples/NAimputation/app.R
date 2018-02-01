@@ -1,4 +1,4 @@
-## Evaluating the effect of missing values and imputing strategies
+## Evaluating the effect of missing values and imputation strategies
 
 #load the data
 data(rubusNA)
@@ -8,14 +8,14 @@ server <- function(input, output){
 
   mydata <- reactive({
 
-    #prepraring the data table without imputing (default) for the plot
+    #prepraring the data table without missing value imputation (default) for the plot
     d <- rubusNA %>%
       as.tibble %>%
       filter(sampleName!="OM_11_DR_P_09_1501") %>%
       gather(feature,raw, -sampleName,-color,-location,-year,-variety,-variety.name,-temperature) %>%
       filter(feature==input$fname)
 
-    #prepraring the data table with imputing for the plot
+    #prepraring the data table imputing missing value before the plot
     check_imputing<-function(string_vect){
       imputing_strategies<-c("fixed","noise","fillpeaks","knn")
       out<-is.element(imputing_strategies,string_vect)
@@ -75,7 +75,7 @@ server <- function(input, output){
                                "Constant Small Value"="fixed",
                                "Small Uniform Noise"="noise",
                                "xcms fillPeaks"="fillPeaks",
-                               "knn imputing"="knn"))))
+                               "knn imputation"="knn"))))
 
     return(plotdata)
   })
@@ -131,7 +131,7 @@ server <- function(input, output){
 
 
 ui <- fluidPage(
-  titlePanel("Evaluating missing values and imputing strategies"),
+  titlePanel("Evaluating missing values and imputation strategies"),
 
   sidebarLayout(
     sidebarPanel(
@@ -145,19 +145,19 @@ ui <- fluidPage(
       checkboxGroupInput(inputId='sclass', label=h4("Sample class"),
                          choices=c("Rubus color"=TRUE)),
 
-      ## type of imputing strategy
-      checkboxGroupInput(inputId='imputing_str', label=h4("Imputing strategy"),
+      ## type of imputation strategy
+      checkboxGroupInput(inputId='imputing_str', label=h4("Imputation strategy"),
                   choices=c("Constant Small Value" = "fixed",
                             "Small noise" = "noise",
                             "xcms fillPeaks"="fillpeaks",
-                            "knn imputing"="knn")),
+                            "knn imputation"="knn")),
       submitButton("Update View")
     ),
 
     mainPanel(
       plotOutput("plotMat", width = "90%", height = "500px"),
       br(),
-      includeMarkdown("NAimputing.md")
+      includeMarkdown("NAimputation.md")
     )
   )
 )

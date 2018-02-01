@@ -5,6 +5,6 @@ This demo allows you to explore the RUBUS dataset (available from Metabolights w
 Some question to orient your discussion ...
 
 * What is the meaning of the plots? 
-* Is the imputing strategy affecting the data distribution? 
+* Is the imputation strategy affecting the data distribution? 
 * Is it important to consider class labels?
-* Which is the best imputing strategy?
+* Which is the best imputation strategy?

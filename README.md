@@ -30,12 +30,12 @@ The data used for the demo are the results of a UPLC-QTOF (ACQUITY UPLC + SYNAPT
 
 *******
 
-### Evaluating the effect of missing values and imputing strategies
+### Evaluating the effect of missing values and imputation strategies
 
-Usually, the data matrix of an untargeted metabolomics experiment contains holes. Which is the best strategy to handle such missing values? How the different imputing strategies affect the study output?
+Usually, the data matrix of an untargeted metabolomics experiment contains "holes". Which is the best strategy to handle such missing values? How the different imputation strategies affect the study output?
 
 ```{r}
-shinyExample('NAimputing')
+shinyExample('NAimputation')
 ```
 
 ### Exploring the data table with Principal Component Analysis (PCA)

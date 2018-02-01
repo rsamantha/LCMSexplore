@@ -40,7 +40,7 @@ shinyExample('NAimputation')
 
 ### Exploring the data table with Principal Component Analysis (PCA)
 
-The data analysis process of an untargeted metabolomics experiment usually is not straightforward. There is always the need to check how the data looks like in order to detect possible issues in the early stages. PCA is thus a valuable tool for the experimenter and data analyst. Here an example is provided allowing to check the effect of missing values, imputing strategies, and possible confounding factors (from the experimental design).
+The data analysis process of an untargeted metabolomics experiment usually is not straightforward. There is always the need to check how the data looks like in order to detect possible issues in the early stages. PCA is thus a valuable tool for the experimenter and data analyst. Here an example is provided allowing to check the effect of missing values, imputation strategies, and possible confounding factors (from the experimental design).
 
 ```{r}
 shinyExample('PCAexplore')
